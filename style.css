@@ -1,0 +1,606 @@
+/* Police */
+
+@font-face {
+    font-family: 'Coolvetica RG';
+    src: url(fonts/coolvetica\ rg.otf);
+}
+
+@font-face {
+    font-family: 'Coolvetica RG Italic';
+    src: url(fonts/coolvetica\ rg\ it.otf);
+}
+
+@font-face {
+    font-family: 'Coolvetica Condensed RG';
+    src: url(fonts/coolvetica\ condensed\ rg.otf);
+}
+
+@font-face {
+    font-family: 'Coolvetica Compressed RG';
+    src: url(fonts/coolvetica\ compressed\ hv.otf);
+}
+
+@font-face {
+    font-family: 'Coolvetica Crammed RG';
+    src: url(fonts/coolvetica\ crammed\ rg.otf);
+}
+
+/* * */
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Coolvetica RG', sans-serif;
+}
+
+/* Path: Header + Navbar */
+
+header {
+    height: 100vh;
+    width: 100%;
+    background-image: url(img/header/landscape.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px black;
+}
+
+header .introduction {
+    height: 100%;
+    width: 90%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: left;
+    margin: auto;
+}
+
+header .introduction h1 {
+    font-size: 2em;
+    margin: 15px 0;
+}
+
+header .introduction p {
+    font-size: 1.2em;
+}   
+
+header .fleche a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px 0;
+    color: white;
+    font-family: Coolvetica RG Italic;
+}
+
+header .fleche a p {
+    color: white;
+    
+}
+
+header .fleche a img {
+    width: 25px;
+}
+
+.navbar {
+    position: absolute;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar a {
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.navbar .logo {
+    width: 50px;
+}
+
+.navbar .nav-links ul {
+    display: flex;
+}
+
+.navbar .nav-links ul li {
+    margin: 0 25px;
+}
+
+.navbar .nav-links ul li.active a {
+    color: #0FC2C0;
+    font-weight: 800;
+}
+
+.navbar .nav-links ul li a:hover {
+    color: #015958;
+    transition: all 0.3s ease;
+}
+
+.navbar .menu-hamburger {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 50px;
+    width: 25px;
+    z-index: 100;
+}
+
+@media screen and (max-width: 800px) {
+
+    .navbar {
+        padding: 0;
+    }
+
+    .navbar .logo {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+    }
+
+    .navbar .menu-hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.295);
+        backdrop-filter: blur(7px);
+        width: 100%;
+        height: 100vh; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease-out;
+        z-index: 99;
+    }
+
+    .nav-links.mobile-menu {
+        margin-left: 0;
+        z-index: 99;
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .nav-links ul li {
+        margin: 30px 0;
+        font-size: 1.4em;
+    }
+}
+
+/* Path: Flexbox - Flexwrap */
+
+.container {
+    width: 100%;   
+    background-color: rgb(255, 255, 255);
+}
+
+.container .flexbox {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: top;
+    margin: 75px 100px 75px 100px;
+}
+
+.container .flexbox .line {
+    width: 1px;
+    height: auto;
+    background-color: rgb(0, 0, 0);
+    margin: 0 25px;
+}   
+
+.container .flexbox div {
+    width: 45%;
+    text-align: left; 
+}
+
+.container .flexbox div h1 {
+    font-size: 2.2em;
+    padding-bottom: 20px;
+}
+
+.container .flexbox div p {
+    font-size: 1.2em;
+    text-align: justify;
+}
+
+.container .flexbox div span {
+    font-style: italic;
+    font-weight: 600;
+}
+
+.container .flexwrap {
+    width: 70%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto 100px auto; 
+    border: solid 1px black;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 7px rgb(0, 0, 0);
+}
+
+.container .flexwrap .left {
+    flex: 50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(img/flexwrap/card.webp);
+    background-position: left; 
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    filter: grayscale(1);
+	-webkit-filter: grayscale(1);
+	-moz-filter: grayscale(1);
+	-o-filter: grayscale(1);
+	-ms-filter: grayscale(1);
+    transition: all 0.5s ease;
+}
+
+.container .flexwrap .left:hover {
+    background-position: center -200px; 
+    filter: grayscale(0);
+	-webkit-filter: grayscale(0);
+	-moz-filter: grayscale(0);
+	-o-filter: grayscale(0);
+	-ms-filter: grayscale(0);
+    transition: all 0.5s ease;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+}
+
+.container .flexwrap .left img {
+    width: 150px;
+}
+
+.container .flexwrap .right {
+    flex: 50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(img/flexwrap/linkedin-wall.png);
+    background-position: center -200px;    
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    filter: grayscale(1);
+	-webkit-filter: grayscale(1);
+	-moz-filter: grayscale(1);
+	-o-filter: grayscale(1);
+	-ms-filter: grayscale(1);
+    transition: all 0.5s ease;
+}
+
+.container .flexwrap .right:hover {
+    background-position: center -250px;
+    filter: grayscale(0);
+	-webkit-filter: grayscale(0);
+	-moz-filter: grayscale(0);
+	-o-filter: grayscale(0);
+	-ms-filter: grayscale(0);
+    transition: all 0.5s ease;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+}
+
+.container .flexwrap .right img {
+    width: 150px;
+}
+
+@media screen and (max-width: 1000px) {
+    .container .flexbox {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin: 75px 0 75px 0;
+    }
+
+    .container .flexbox .line {
+        width: 90%;
+        height: 1px;
+        background-color: rgb(0, 0, 0);
+        margin: 50px 0;
+    } 
+
+    .container .flexbox div {
+        width: 80%;
+        text-align: left; 
+    }
+
+    .container .flexwrap {
+        width: 70%;
+        height: 700px;
+        flex-direction: column;
+    }
+
+    .container .flexwrap .left {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+    }
+
+    .container .flexwrap .right {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+    }
+}
+
+/* Path: footer.css */
+
+footer {
+    width: 100%;
+    height: auto;
+    background-image: url(img/footer/landscape.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 1px 0 10px rgb(0, 0, 0);
+    color: white;
+    padding: 40px 0;
+    font-size: 14px;
+}
+
+.container-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 50px 0 50px;
+}
+
+.container-footer .left {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-footer .left h1 {
+    font-size: 1.2em;
+    padding-bottom: 10px;
+}
+
+.container-footer .left a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 5px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.container-footer .left a:hover {    
+    color: #0FC2C0;
+    transition: all 0.3s ease;
+}
+
+.container-footer .center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-footer .right {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-footer .right h1 {
+    font-size: 1.2em;
+    padding-bottom: 10px;
+}
+
+.container-footer .right a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 15px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.container-footer .right a:hover {    
+    color: #0FC2C0;
+    transition: all 0.3s ease;
+}
+
+.container-footer .right img {
+    width: 25px;
+    padding-right: 10px;
+}
+
+@media screen and (max-width: 650px) {
+    .container-footer {
+        display: flex;
+        flex-direction: column;
+        margin: 0 50px 0 50px;
+    }
+
+    .container-footer .left, .container-footer .center, .container-footer .right {
+        padding: 15px 0 15px 0;
+    }
+}
+
+/* Path: project.html */
+
+.container-projet {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
+
+.container-projet div {
+    width: 25%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    border: solid 2px rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 50px 25px 50px 25px;
+    box-shadow: 0 0 7px rgb(0, 0, 0);
+}
+
+.container-projet div h1 {
+    font-size: 36px;
+    padding-bottom: 20px;
+}
+
+.container-projet div p {
+    font-size: 16px;
+    text-align: justify;
+}
+
+.container-projet div p span {
+    color: #0FC2C0;
+}
+
+.container-projet button {
+    width: 200px;
+    height: 50px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2); 
+    border: solid 2px rgba(255, 255, 255, 1);
+    border-radius: 8px;
+    box-shadow: 0 0 15px black;
+    transition: ease-out 0.5s; 
+    font-size: 1em;
+    margin-top: 30px;
+}
+
+.container-projet button:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white; 
+    font-size: 1.1em;
+}
+
+@media screen and (max-width: 800px) {
+    .container-projet {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        color: white;
+        margin-top: 100px;
+    }
+
+    .container-projet div {
+        width: 75%;
+    }
+}
+
+/* Path: contact.html */
+
+header .container-contact {
+    width: 60%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    color: white;
+    border: solid 1px rgb(0, 0, 0);
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    box-sizing: border-box;
+    padding: 15px;
+    margin: auto;
+}
+
+header .container-contact .line {
+    width: 100%;
+    height: 1px;
+    background-color: rgb(255, 255, 255);
+    margin: 25px 0;
+}
+
+header .container-contact form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header .container-contact form input {
+    width: 45%;
+}
+
+header .container-contact form input, header .container-contact form textarea {
+    margin: 20px 0;
+    padding: 10px;
+    color: white;
+    border: none;
+    outline: none;
+    border-bottom: solid 2px white;
+    transition: 0.2s;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.1); 
+}
+header .container-contact form textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+}
+
+header .container-contact form button {
+    width: 200px;
+    height: 50px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2); 
+    border: solid 2px rgba(255, 255, 255, 1);
+    border-radius: 8px;
+    box-shadow: 0 0 15px black;
+    transition: ease-out 1s; 
+    font-size: 1em;
+    margin-bottom: 10px;
+    margin: 0 auto;
+}
+
+header .container-contact form button:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white; 
+    font-size: 1.1em;
+}
+
+@media screen and (max-width: 800px) {
+    header .container-contact {
+        height: auto;
+    }
+
+    header .container-contact form input {
+        width: 100%;
+    }
+}

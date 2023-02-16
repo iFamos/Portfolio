@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="style.css">
+
+        <title>Fábio M. | Accueil</title>
+
+    </head>
+
+    <body>
+
+        <nav class="navbar">
+            <img src="img/nav/logo.png" alt="Logo Fábio M." class="logo">
+            <div class="nav-links">
+                <ul>
+                    <li class="active"><a href="index.html">Á Propos de Moi</a></li>
+                    <li><a href="project.html">Projets</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </u>
+            </div>
+            <img src="img/nav/btn-menu.png" alt="Menu Hamburger" class="menu-hamburger">
+        </nav>
+        
+        <header>
+            <div class="introduction">
+                <h1>Bonjour. Je suis Fábio.</h1>
+                <p>Je suis actuellement à la recherche d'un apprentissage dans le Développement d'Application.</p>
+            </div>
+            <div class="fleche">
+                <a href="#page_about">
+                    <p>POUR PLUS D'INFORMATIONS</p>
+                    <img src="img/header/fleche.png" alt="Flèche">
+                </a>
+            </div>
+        </header>
+
+        <div class="container" id="page_about">
+            <div class="flexbox">
+                <div>
+                    <h1>Á PROPOS DE MOI</h1>
+                    <p>Je cherche actuellement une place d'apprentissage sur Genève dans le domaine de l'informatique (Développement d'Application). Je me forme en autonomie sur <span>OpenClassRooms</span> et sur <span>W3School</span>. Je suis passionné par l'informatique depuis l'enfance ainsi par le monde des jeux vidéos.</p>
+                </div>
+                <span class="line"></span>
+                <div>
+                    <h1>MES COMPÉTENCES</h1>
+                    <p>En me formant sur W3Schools j'ai acquis un bon niveau en <span>HTML</span> et <span>CSS</span>, actuellement j'apprend le <span>JavaScript</span>. Autonome, proactif, en quête de nouvelles compétences et d'expériences, je suis à l'aise avec les nouvelles technologie.</p>
+                </div>
+            </div>
+            <div class="flexwrap">
+                <a href="https://github.com/iFamos" target="_blank" class="left">
+                    <img src="img/flexwrap/github.png" alt="Github">
+                </a>
+                <a href="https://www.linkedin.com/in/f%C3%A1bio-moreira-476512167/" target="_blank"  class="right">
+                    <img src="img/flexwrap/linkedin.png" alt="Linkedin">
+                </a>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container-footer">
+                <div class="left">
+                    <h1>PAGES</h1>
+                    <div><a href="index.html">Á Propos de Moi</a></div>
+                    <div><a href="project.html">Projets</a></div>
+                    <div><a href="contact.html">Contact</a></div>
+                </div>
+                <div class="center">
+                    <p>© 2023 Fábio M. Tous droits réservés.</p>
+                </div>
+                <div class="right">
+                    <h1>VOIR MON TRAVAIL</h1>
+                    <div><a href="https://github.com/iFamos" target="_blank"><img src="img/footer/github.png" alt="Github"> Github</a></div>
+                    <h1>ME CONTACTER</h1>
+                    <div><a href="https://www.linkedin.com/in/f%C3%A1bio-moreira-476512167/" target="_blank"><img src="img/footer/Linkedin.png" alt="Linkedin"> Linkedin</a></div>
+                </div>
+        </footer>
+        
+    </body>
+
+    <script>
+        const menuHamburger = document.querySelector(".menu-hamburger");
+        const navLinks = document.querySelector(".nav-links");
+ 
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu');
+        })
+    </script>
+
+</html>

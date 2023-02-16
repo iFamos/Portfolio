@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="style.css">
+
+        <title>Fábio M. | Accueil</title>
+
+    </head>
+
+    <body>
+
+        <nav class="navbar">
+            <img src="img/nav/logo.png" alt="Logo Fábio M." class="logo">
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Á Propos de Moi</a></li>
+                    <li><a href="project.html">Projets</a></li>
+                    <li class="active"><a href="contact.html">Contact</a></li>
+                </u>
+            </div>
+            <img src="img/nav/btn-menu.png" alt="Menu Hamburger" class="menu-hamburger">
+        </nav>
+
+        <header>
+            <div class="container-contact">
+                <div>
+                    <h1>CONTACT</h1>
+                    <p>Vous pouvez me contacter via Linkedin ou via le formulaire ci-dessous.</p>
+                </div>
+                <div class="line"></div>
+                <form action='mailto:fabio.m.pro@hotmail.com' method='POST' enctype='text/plain' name='EmailForm'>
+                    <input type="text" name="name" placeholder="Entrer votre nom" required>
+                    <input type="email" name="email" placeholder="Entrer votre email" required>
+                    <input type="text" name="subject" placeholder="Entrer votre sujet" required>
+                    <input type="text" name="number" placeholder="Entrer votre numéro de téléphone" required>
+                    <textarea type="text" name="message" placeholder="Entrer votre message..."></textarea>
+                    <button type="submit" value="Send">Envoyer</button>
+                </form>
+            </div>
+        </header>
+
+        <footer>
+            <div class="container-footer">
+                <div class="left">
+                    <h1>PAGES</h1>
+                    <div><a href="index.html">Á Propos de Moi</a></div>
+                    <div><a href="project.html">Projets</a></div>
+                    <div><a href="contact.html">Contact</a></div>
+                </div>
+                <div class="center">
+                    <p>© 2023 Fábio M. Tous droits réservés.</p>
+                </div>
+                <div class="right">
+                    <h1>VOIR MON TRAVAIL</h1>
+                    <div><a href="https://github.com/iFamos" target="_blank"><img src="img/footer/github.png" alt="Github"> Github</a></div>
+                    <h1>ME CONTACTER</h1>
+                    <div><a href="https://www.linkedin.com/in/f%C3%A1bio-moreira-476512167/" target="_blank"><img src="img/footer/Linkedin.png" alt="Linkedin"> Linkedin</a></div>
+                </div>
+        </footer>
+        
+    </body>
+
+    <script>
+        const menuHamburger = document.querySelector(".menu-hamburger")
+        const navLinks = document.querySelector(".nav-links")
+ 
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu')
+        })
+    </script>
+
+</html>

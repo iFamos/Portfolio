@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="style.css">
+
+        <title>Fábio M. | Accueil</title>
+
+    </head>
+
+    <body>
+
+        <nav class="navbar">
+            <img src="img/nav/logo.png" alt="Logo Fábio M." class="logo">
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Á Propos de Moi</a></li>
+                    <li class="active"><a href="project.html">Projets</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </u>
+            </div>
+            <img src="img/nav/btn-menu.png" alt="Menu Hamburger" class="menu-hamburger">
+        </nav>
+
+        <header>
+            <div class="container-projet">
+                <div>
+                    <h1>BOT Discord</h1>
+                    <p>J'ai commencé à réaliser ce BOT Discord pour m'améliorer en <span>JavaScript</span> avec <span>NodeJS</span> et commencer à comprendre comment intéragir avec une base de données comme <span>MongoDB</span>.<br>
+                    </p> 
+                    <button>VOIR LE CODE</button>
+                </div>
+                <div>
+                    <h1>CE SITE</h1>
+                    <p>Ce site a été développer pour mes compétences en autonomie à de potentiels recruteurs.</p> 
+                    <button>VOIR LE CODE</button>
+                </div>
+            </div>
+        </header>
+
+        <footer>
+            <div class="container-footer">
+                <div class="left">
+                    <h1>PAGES</h1>
+                    <div><a href="index.html">Á Propos de Moi</a></div>
+                    <div><a href="project.html">Projets</a></div>
+                    <div><a href="contact.html">Contact</a></div>
+                </div>
+                <div class="center">
+                    <p>© 2023 Fábio M. Tous droits réservés.</p>
+                </div>
+                <div class="right">
+                    <h1>VOIR MON TRAVAIL</h1>
+                    <div><a href="https://github.com/iFamos" target="_blank"><img src="img/footer/github.png" alt="Github"> Github</a></div>
+                    <h1>ME CONTACTER</h1>
+                    <div><a href="https://www.linkedin.com/in/f%C3%A1bio-moreira-476512167/" target="_blank"><img src="img/footer/Linkedin.png" alt="Linkedin"> Linkedin</a></div>
+                </div>
+        </footer>
+        
+    </body>
+
+    <script>
+        const menuHamburger = document.querySelector(".menu-hamburger")
+        const navLinks = document.querySelector(".nav-links")
+ 
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu')
+        })
+    </script>
+
+</html>
