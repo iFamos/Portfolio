@@ -517,6 +517,7 @@ footer {
 
     .container-projet div {
         width: 75%;
+        height: auto;
     }
 }
 
@@ -598,6 +599,8 @@ header .container-contact form button:hover {
 @media screen and (max-width: 800px) {
     header .container-contact {
         height: auto;
+        width: 95%;
+        margin: 130px auto;
     }
 
     header .container-contact form input {
